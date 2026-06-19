@@ -118,4 +118,5 @@ Inicia sesión y devuelve datos del usuario autenticado.
 3. Probar con Postman o Thunder Client en VS Code
 
 ## Repositorio
-https://github.com/camilo20122016-a11y/mototaller-ga7
+https://github.com/camilo20122016-a11y/mototaller-api
+
