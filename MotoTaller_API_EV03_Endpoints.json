@@ -1,0 +1,79 @@
+{
+  "info": {
+    "name": "MotoTaller API v2 — GA7-220501096-AA5-EV03",
+    "description": "API REST completa del proyecto MotoTaller. Módulos: Auth + Clientes CRUD.\nAprendiz: Camilo Rios — SENA ADSO 2025",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "AUTH",
+      "item": [
+        {
+          "name": "Registro de Usuario",
+          "request": {
+            "method": "POST",
+            "header": [{"key":"Content-Type","value":"application/json"}],
+            "body": {"mode":"raw","raw":"{\n  \"nombre\":   \"Camilo Rios\",\n  \"email\":    \"camilo@mototaller.com\",\n  \"password\": \"MiClave123\",\n  \"rol\":      \"tecnico\"\n}","options":{"raw":{"language":"json"}}},
+            "url": {"raw":"http://localhost/mototaller-api/index.php?ruta=registro","protocol":"http","host":["localhost"],"path":["mototaller-api","index.php"],"query":[{"key":"ruta","value":"registro"}]}
+          }
+        },
+        {
+          "name": "Inicio de Sesion (Login)",
+          "request": {
+            "method": "POST",
+            "header": [{"key":"Content-Type","value":"application/json"}],
+            "body": {"mode":"raw","raw":"{\n  \"email\":    \"camilo@mototaller.com\",\n  \"password\": \"MiClave123\"\n}","options":{"raw":{"language":"json"}}},
+            "url": {"raw":"http://localhost/mototaller-api/index.php?ruta=login","protocol":"http","host":["localhost"],"path":["mototaller-api","index.php"],"query":[{"key":"ruta","value":"login"}]}
+          }
+        }
+      ]
+    },
+    {
+      "name": "CLIENTES",
+      "item": [
+        {
+          "name": "Listar Todos los Clientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {"raw":"http://localhost/mototaller-api/index.php?ruta=clientes","protocol":"http","host":["localhost"],"path":["mototaller-api","index.php"],"query":[{"key":"ruta","value":"clientes"}]}
+          }
+        },
+        {
+          "name": "Obtener Cliente por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {"raw":"http://localhost/mototaller-api/index.php?ruta=clientes&id=1","protocol":"http","host":["localhost"],"path":["mototaller-api","index.php"],"query":[{"key":"ruta","value":"clientes"},{"key":"id","value":"1"}]}
+          }
+        },
+        {
+          "name": "Crear Cliente",
+          "request": {
+            "method": "POST",
+            "header": [{"key":"Content-Type","value":"application/json"}],
+            "body": {"mode":"raw","raw":"{\n  \"nombre\":    \"Carlos Ramirez\",\n  \"telefono\":  \"3101234567\",\n  \"direccion\": \"Calle 10 # 5-20, Medellin\",\n  \"email\":     \"carlos@email.com\"\n}","options":{"raw":{"language":"json"}}},
+            "url": {"raw":"http://localhost/mototaller-api/index.php?ruta=clientes","protocol":"http","host":["localhost"],"path":["mototaller-api","index.php"],"query":[{"key":"ruta","value":"clientes"}]}
+          }
+        },
+        {
+          "name": "Actualizar Cliente",
+          "request": {
+            "method": "PUT",
+            "header": [{"key":"Content-Type","value":"application/json"}],
+            "body": {"mode":"raw","raw":"{\n  \"nombre\":    \"Carlos Ramirez Actualizado\",\n  \"telefono\":  \"3209999999\",\n  \"direccion\": \"Carrera 15 # 8-30, Medellin\",\n  \"email\":     \"carlos@email.com\"\n}","options":{"raw":{"language":"json"}}},
+            "url": {"raw":"http://localhost/mototaller-api/index.php?ruta=clientes&id=1","protocol":"http","host":["localhost"],"path":["mototaller-api","index.php"],"query":[{"key":"ruta","value":"clientes"},{"key":"id","value":"1"}]}
+          }
+        },
+        {
+          "name": "Eliminar Cliente",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {"raw":"http://localhost/mototaller-api/index.php?ruta=clientes&id=1","protocol":"http","host":["localhost"],"path":["mototaller-api","index.php"],"query":[{"key":"ruta","value":"clientes"},{"key":"id","value":"1"}]}
+          }
+        }
+      ]
+    }
+  ]
+}

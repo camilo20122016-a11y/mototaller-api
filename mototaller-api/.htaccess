@@ -1,0 +1,13 @@
+# ============================================================
+# .htaccess — MotoTaller API REST
+# Redirige todas las peticiones a index.php (Front Controller)
+# ============================================================
+
+RewriteEngine On
+
+# Permitir acceso directo a archivos y carpetas que existen
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todo lo demás a index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
